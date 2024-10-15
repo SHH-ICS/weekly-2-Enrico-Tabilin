@@ -6,17 +6,29 @@ def is_float(string):
         return True
     else:
         return False
+    
+def is_negative(string):
+    inputstr = string.replace(".", "")
+    print(inputstr)
+    if inputstr.replace("-", "").isnumeric():
+        return True
+    else:
+        return False
 
 def get_diameter():
     print("Enter the diameter, without units.")
     dia = input()
-    if is_float(dia) == True:
+    if is_float(dia):
       dia = float(dia)
       return dia
     else:
-      print("That isn't a number!")
-      dia = get_diameter()
-      return dia
+      if is_negative(dia):
+        dia = float(dia)
+        return dia
+      else:
+        print("That isn't a number!")
+        dia = get_diameter()
+        return dia
 
 d = get_diameter()
 print("Calculating...")
