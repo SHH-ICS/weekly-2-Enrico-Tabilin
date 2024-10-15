@@ -23,6 +23,6 @@ print("Calculating...")
 r = d/2
 a = r**2*math.pi
 c = 2*math.pi*r
-print("The radius is:", r)
-print("The area is:", a)
-print("The circumference is:", c)
+print("The radius is:", r,"units")
+print("The area is:", a,"units")
+print("The circumference is:", c,"units")
