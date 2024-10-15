@@ -9,7 +9,6 @@ def is_float(string):
     
 def is_negative(string):
     inputstr = string.replace(".", "")
-    print(inputstr)
     if inputstr.replace("-", "").isnumeric():
         return True
     else:
